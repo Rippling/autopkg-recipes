@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of GIMP from gimp.org.
+	Note: Code signature verification cannot be done on GIMP.app at this time.</string>
+	<key>Identifier</key>
+	<string>io.github.hjuutilainen.download.GIMP</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>GIMP</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.5.2</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>href="//download.gimp.org/mirror/pub/gimp/v(?P&lt;major_version&gt;[\d\.]+)/osx/gimp-(?P&lt;full_version&gt;[\d\.]+)-x86_64-?\d?.dmg"</string>
+				<key>url</key>
+				<string>https://www.gimp.org/downloads/</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%full_version%.dmg</string>
+				<key>url</key>
+				<string>https://download.gimp.org/mirror/pub/gimp/v%major_version%/osx/gimp-%full_version%-x86_64.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
