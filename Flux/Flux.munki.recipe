@@ -28,6 +28,10 @@ Tell f.lux what kind of lighting you have, and where you live. Then forget about
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>category</key>
+			<string>Utilities</string>
+            <key>developer</key>
+			<string>f.lux</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

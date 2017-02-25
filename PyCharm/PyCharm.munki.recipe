@@ -13,7 +13,7 @@
     <key>MUNKI_REPO_SUBDIR</key>
     <string>apps/pycharm</string>
     <key>MUNKI_CATEGORY</key>
-    <string>Developer</string>
+    <string>Developer Tools</string>
     <key>pkginfo</key>
     <dict>
       <key>catalogs</key>

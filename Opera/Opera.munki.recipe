@@ -26,6 +26,10 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>category</key>
+			<string>Browser</string>
+            <key>developer</key>
+			<string>Opera</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

@@ -22,14 +22,16 @@
 			</array>
 			<key>description</key>
 			<string>Chat, docs, task lists, and spreadsheets in one app.</string>
-			<key>developer</key>
-			<string>Quip, Inc.</string>
 			<key>display_name</key>
 			<string>Quip</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>category</key>
+			<string>Productivity</string>
+            <key>developer</key>
+			<string>Salesforce</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

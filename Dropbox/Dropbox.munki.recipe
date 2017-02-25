@@ -37,6 +37,10 @@ located in their user's home folder.</string>
             <string>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere. This means that any file you save to your Dropbox will automatically save to all your computers, phones and even the Dropbox website.</string>
             <key>display_name</key>
             <string>Dropbox</string>
+            <key>category</key>
+			<string>Productivity</string>
+            <key>developer</key>
+			<string>Dropbox</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>postinstall_script</key>
