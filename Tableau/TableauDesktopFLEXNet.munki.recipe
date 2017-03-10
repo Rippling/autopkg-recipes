@@ -27,7 +27,7 @@ And then add his recipe for "Tableau".
 			</array>
 			<key>catalogs</key>
 			<array>
-				<string>development-tableau-TableauDesktopFLEXNet</string>
+				<string>testing</string>
 			</array>
 			<key>description</key>
 			<string>FLEXNet licensing subsystem for Tableau Desktop</string>
