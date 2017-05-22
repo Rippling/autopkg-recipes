@@ -32,6 +32,10 @@
         <string>%DISPLAY_NAME%</string>
         <key>name</key>
         <string>%NAME%</string>
+        <key>requires</key>
+        <array>
+            <string>OracleJava8JDK</string>
+        </array>
       </dict>
     </dict>
     <key>ParentRecipe</key>
