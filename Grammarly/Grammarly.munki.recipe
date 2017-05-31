@@ -2,30 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.0.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads latest RealVNC Viewer and imports it into Munki.</string>
+	<string>Downloads the latest version of Grammarly and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.foigus.munki.RealVNCViewer</string>
+	<string>com.github.homebysix.munki.Grammarly</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/realvnc</string>
+		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>RealVNCViewer</string>
+		<string>Grammarly</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>Productivity</string>
 			<key>description</key>
-			<string>VNC enables you to remotely access and control your devices wherever you are in the world, whenever you need to.</string>
+			<string>App and web service for correcting grammatical issues and detecting plagarism.</string>
 			<key>developer</key>
-			<string>RealVNC</string>
+			<string>Grammarly, Inc</string>
 			<key>display_name</key>
-			<string>RealVNC Viewer</string>
+			<string>Grammarly</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -33,22 +33,11 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.5.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.foigus.download.RealVNCViewer</string>
+	<string>com.github.homebysix.download.Grammarly</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%pathname%/VNC Viewer.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleVersion</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
