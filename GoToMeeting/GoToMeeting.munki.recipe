@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest GoToMeeting disk image and imports into Munki.</string>
+	<string>Downloads the latest version of GoToMeeting and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.thenikola.munki.GoToMeeting</string>
+	<string>com.github.homebysix.munki.GoToMeeting</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Utilities</string>
+		<string>apps/GoToMeeting</string>
 		<key>NAME</key>
 		<string>GoToMeeting</string>
 		<key>pkginfo</key>
@@ -18,33 +18,61 @@
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>Webinar Software</string>
 			<key>description</key>
-			<string>GoToMeeting is a web-hosted service created and marketed by the Online Services division of Citrix Systems. It is an online meeting, desktop sharing, and video conferencing software that enables the user to meet with other computer users, customers, clients or colleagues via the Internet in real time.</string>
+			<string>Online meeting, desktop sharing, and video conferencing software.</string>
 			<key>developer</key>
-			<string>Citrix</string>
+			<string>Citrix Systems, Inc.</string>
 			<key>display_name</key>
 			<string>GoToMeeting</string>
-			<key>minimum_os_version</key>
-			<string>10.7</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>preinstall_script</key>
+			<string>#!/bin/sh
+
+echo "Removing old copies of GoToMeeting from the /Applications folder..."
+rm -rf /Applications/GoToMeeting\ \(*\).app
+
+exit $?
+            </string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.5.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.thenikola.download.GoToMeeting</string>
+	<string>com.github.homebysix.download.GoToMeeting</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_path</key>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%dmg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
