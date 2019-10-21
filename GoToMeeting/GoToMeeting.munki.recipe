@@ -8,6 +8,8 @@
 	<string>com.github.homebysix.munki.GoToMeeting</string>
 	<key>Input</key>
 	<dict>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+		<string>True</string>		
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/GoToMeeting</string>
 		<key>NAME</key>
