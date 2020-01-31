@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>OpenJDK</string>
+        <string>OpenJDK11</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>utility/Oracle</string>
         <key>pkginfo</key>
