@@ -43,6 +43,8 @@ located in their user's home folder.</string>
 			<string>Dropbox</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>		
             <key>postinstall_script</key>
             <string>#!/bin/sh
 # based on Ruby postinstall script by Riley Shott:
