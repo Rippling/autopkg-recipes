@@ -48,6 +48,8 @@ http://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx for a table of Cu
                 <string>%CULTURE_CODE%</string>
                 <key>munki_update_name</key>
                 <string>%NAME%</string>
+                <key>unattended_install</key>
+                <true/>	                
                 <key>version</key>
                 <string>%VERSION%</string>
             </dict>
