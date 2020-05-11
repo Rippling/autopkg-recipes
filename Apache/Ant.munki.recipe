@@ -16,6 +16,8 @@
       <string>Software Development</string>
       <key>MUNKI_REPO_SUBDIR</key>
       <string>%NAME%</string>
+      <key>unattended_install</key>
+      <true/>	      
       <key>pkginfo</key>
       <dict>
         <key>catalogs</key>
