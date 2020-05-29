@@ -14,6 +14,10 @@
 		<string>Zoom</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>zoom.us</string>
+			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
@@ -24,18 +28,16 @@
 			<string>Zoom Video Communications, Inc.</string>
 			<key>display_name</key>
 			<string>Zoom</string>
+			<key>minimum_os_version</key>
+			<string>10.7</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
-			<key>blocking_applications</key>
-			<array>
-				<string>zoom.us</string>
-			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.1</string>
+	<string>1.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.pkg.Zoom</string>
 	<key>Process</key>
@@ -43,12 +45,19 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>additional_pkginfo</key>
-				<dict>
-					<key>version</key>
-					<string>%version%</string>
-				</dict>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>installs_item_paths</key>
+				<array>
+					<string>/Applications/zoom.us.app</string>
+				</array>
+				<key>version_comparison_key</key>
+				<string>CFBundleVersion</string>
 			</dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>MunkiPkginfoMerger</string>
 		</dict>
