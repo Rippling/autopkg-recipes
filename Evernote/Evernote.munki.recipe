@@ -30,10 +30,6 @@ http://update.evernote.com/prerelease/ENMac/EvernoteMacUpdate.xml
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
-            <key>category</key>
-			<string>Productivity</string>
-            <key>developer</key>
-			<string>Evernote</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

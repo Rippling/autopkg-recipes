@@ -34,10 +34,6 @@ Intel Macs as of Munki tools version 0.9.2.</string>
             <array>
                 <string>x86_64</string>
             </array>
-            <key>category</key>
-            <string>Utilities</string>
-            <key>developer</key>
-            <string>VideoLAN</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
