@@ -38,6 +38,8 @@
         <array>
             <string>OracleJava8JDK</string>
         </array>
+        <key>unattended_install</key>
+        <true/>	        
       </dict>
     </dict>
     <key>ParentRecipe</key>
