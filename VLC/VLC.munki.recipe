@@ -33,6 +33,7 @@ Intel Macs as of Munki tools version 0.9.2.</string>
             <key>supported_architectures</key>
             <array>
                 <string>x86_64</string>
+                <string>arm64</string>
             </array>
         </dict>
     </dict>
